@@ -19,6 +19,7 @@ class home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 //Scaffold = is like a wraper of all widgets given below
+
       appBar: AppBar(
         title: Text("Chirag",
             style: TextStyle(
@@ -28,19 +29,24 @@ class home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
+
       body: Center(
-        child: Text(
-          'Welcome! This is my first app',
-          style: TextStyle(
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.2,
-            color: Colors.black,
+        // child: Text(
+        //   'Welcome! This is my first app',
+        // style: TextStyle(
+        //   fontSize: 30.0,
+        //   fontWeight: FontWeight.bold,
+        //   letterSpacing: 1.2,
+        //   color: Colors.black,
+        // fontFamily: 'Carattere',
+        // ),
 //changes made in "pubspec.yaml" and fonts added from google font
-            fontFamily: 'Carattere',
-          ),
+        child: Image(
+          image: NetworkImage(
+              'https://images.unsplash.com/photo-1536338701933-9fb6ce505c48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80'),
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('HIT'),
