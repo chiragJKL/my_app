@@ -1,0 +1,43 @@
+// ignore_for_file: prefer_const_constructors
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+      home:
+          home(), //home function will take us to CLASS we made and will return "build" meaning it will not require "hot restart" and will make debugging user friendly
+    ));
+
+class home extends StatelessWidget {
+  // Here this code line represents "Inheritence". It inherits StatelessWidget's properties into Home
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Chirag",
+            style: TextStyle(
+              fontSize: 40.0,
+              fontFamily: 'Carattere',
+            )),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Center(
+        // child: Icon(
+        //   Icon. _____, //not working like android studio
+        child: ElevatedButton(
+          onPressed: () {},
+          //check FLAT BUTTON and OUTLINE BUTTON too!
+          child: Text('CLICK ME'),
+          // color: Colors.lightBlue didn't work in VS Code,
+          // size: 60.0,
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('HIT'),
+        backgroundColor: Colors.red[600],
+      ),
+    );
+    //above line has ";" cause its 'return 0;' kinda thing
+  }
+}
