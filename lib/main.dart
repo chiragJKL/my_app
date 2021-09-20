@@ -7,19 +7,12 @@ void main() => runApp(MaterialApp(
           home(), //home function will take us to CLASS we made and will return "build" meaning it will not require "hot restart" and will make debugging user friendly
     ));
 
-//  Here Centre, Textstyle, Colors are all built-in widgets which are code as CLASS! So we can make our own widgets by using CLASS
-
-// StatelessWidget = means widget which wont change over time, like COLORS, TEXTS
-// StateFulWidget = means widget which requires to change over time, like COUNT
-
 class home extends StatelessWidget {
   // Here this code line represents "Inheritence". It inherits StatelessWidget's properties into Home
 
-  @override //means its overriding "build" on StatelessWidget
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-//Scaffold = is like a wraper of all widgets given below
-
       appBar: AppBar(
         title: Text("Chirag",
             style: TextStyle(
@@ -29,24 +22,14 @@ class home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-
+      
       body: Center(
-        // child: Text(
-        //   'Welcome! This is my first app',
-        // style: TextStyle(
-        //   fontSize: 30.0,
-        //   fontWeight: FontWeight.bold,
-        //   letterSpacing: 1.2,
-        //   color: Colors.black,
-        // fontFamily: 'Carattere',
-        // ),
-//changes made in "pubspec.yaml" and fonts added from google font
+//changes made in "pubspec.yaml" for asset image
         child: Image(
-          image: NetworkImage(
-              'https://images.unsplash.com/photo-1536338701933-9fb6ce505c48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80'),
+          image: AssetImage('asset-2.jpg'),
         ),
       ),
-
+      
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('HIT'),
