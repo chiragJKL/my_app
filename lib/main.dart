@@ -22,14 +22,12 @@ class home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      
       body: Center(
 //changes made in "pubspec.yaml" for asset image
         child: Image(
           image: AssetImage('asset-2.jpg'),
         ),
       ),
-      
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('HIT'),
